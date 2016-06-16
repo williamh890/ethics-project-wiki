@@ -10,13 +10,13 @@ and open the template in the editor.
 
 
 html,
-body {
+/*body {
     height:100%;
     margin:0;
     padding:0;
     color:#000;
     background:#fff;
-}
+}*/
 #body_hfw {
     height:100%;
     width:100%;
