@@ -10,7 +10,7 @@ else {
 }
 
 function getPage(id, checkForAuthorization) {
-	var mainUrl = '/';
+	var mainUrl = 'public_html/';
 
 	if(checkForAuthorization) {
 		if(premium) {
