@@ -3,14 +3,14 @@ var premium = false;
 var keystrokes = "";
 
 if (document.location.href.indexOf('redmine') > -1) {
-	baseURL = "https://dev.projects.cs.uaf.edu/redmine/projects/cs371_html_from_wiki/repository/revisions/master/raw/";
+	baseURL = "https://dev.projects.cs.uaf.edu/redmine/projects/cs371_html_from_wiki/repository/revisions/master/raw/public_html/";
 }
 else {
 	baseURL = "file://Users/johnpquan/UAF/Teaching/CS371_Computer_Ethics_and_Technical_Communication/HTML5Application";
 }
 
 function getPage(id, checkForAuthorization) {
-	var mainUrl = 'public_html/';
+	var mainUrl = '';
 
 	if(checkForAuthorization) {
 		if(premium) {
