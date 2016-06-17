@@ -23,10 +23,15 @@ body {
     margin:0 auto;
     background:#ddd;
     min-width: 1040px;
+    min-height: 1000px;
 }
 #header_hfw {
     padding:10px;
     background:#ee5f5b;
+}
+#main_hfw {
+    min-width: 1040px;
+    min-height: 400px;
 }
 #content_1_hfw {
     float:left;
@@ -68,4 +73,10 @@ body {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+@media print {
+    #body_hfw {
+        background: #fff;
+    }
+
 }
