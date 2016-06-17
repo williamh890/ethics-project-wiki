@@ -22,41 +22,40 @@ body {
     width:100%;
     margin:0 auto;
     background:#ddd;
+    min-width: 1040px;
 }
 #header_hfw {
     padding:10px;
     background:#ee5f5b;
 }
 #content_1_hfw {
-    height:100%;
     float:left;
+    height: 100vh;
     padding: 10px;
     width:24.5%;
-    min-width: 20px;
-    flex:1;
-    height: 100%;
-    padding:0px;
+    min-width: max-content;
     background:#bfb;
 }
 #content_2_hfw {    
-    height:100%;
     float:right;
+    height:100vh;
     width:75%;
 }
 #content_2_1_hfw {    
     height:100%;
     float:left;
     padding: 10px;
-    width:49%;
-    padding:3px;
+    width:50%;
+    padding:10px;
     background:#dff;
 }
 #content_2_2_hfw {    
     height:100%;
     float:right;
-    width:49%;
-    padding:3px;
-    background:#dff;
+    width:50%;
+    min-width: 386px;
+    padding:10px;
+    background:#aae0f8;
 }
 #footer_hfw {
     clear:both;
