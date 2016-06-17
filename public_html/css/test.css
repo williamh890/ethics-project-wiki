@@ -32,8 +32,8 @@ body {
     float:left;
     height: 100vh;
     padding: 10px;
+    min-width: max-content;
     width:24.5%;
-    min-width: 29vw;
     background:#bfb;
 }
 #content_2_hfw {    
