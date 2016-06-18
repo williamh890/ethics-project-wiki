@@ -24,12 +24,55 @@ body {
     width:100%;
     margin:0 auto;
     background:#ddd;
-
 }
 #header_hfw {
-    padding:10px;
-    background:#ee5f5b;
+    height: 35em;
+    padding:2em;
+    background: #fbb450;
 }
+.bgimg_hfw {
+    background: url('img/rainbow.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /*background-size: cover;
+    background: bisque;
+    background-repeat: no-repeat;
+    height: 20em;*/
+}
+#nav_hfw {
+	width: 100%;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+#nav_hfw ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+}
+#nav_hfw li {
+	float: left;
+}
+#nav_hfw li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc;
+}
+#nav_hfw li:first-child a {
+	border-left: 1px solid #ccc;
+}
+#nav_hfw li a:hover {
+	color: #c00;
+	background-color: #fff;
+}
+
 #main_hfw {
     min-width: 1040px;
     min-height: 400px;
