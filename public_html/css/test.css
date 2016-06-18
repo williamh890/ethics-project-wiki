@@ -9,14 +9,15 @@ and open the template in the editor.
 */
 
 
-/*html,
+html,
 body {
     height:100%;
+    min-height: 100%;
     margin:0;
     padding:0;
     color:#000;
     background:#fff;
-}*/
+}
 #body_hfw {
     height:100%;
     min-height: 100%;
@@ -34,6 +35,8 @@ body {
     min-height: 400px;
 }
 #content_1_hfw {
+    height:100%;
+    min-height: 100%;
     float:left;
     height: 100vh;
     padding: 10px;
@@ -48,6 +51,7 @@ body {
 }
 #content_2_1_hfw {    
     height:100%;
+    min-height: 100%;
     float:left;
     padding: 10px;
     width:50%;
@@ -56,6 +60,7 @@ body {
 }
 #content_2_2_hfw {    
     height:100%;
+    min-height: 100%;
     float:right;
     width:50%;
     min-width: 386px;
