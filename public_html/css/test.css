@@ -28,51 +28,82 @@ body {
 #header_hfw {
     height: 35em;
     padding:2em;
-    background: #fbb450;
-}
-.bgimg_hfw {
-    background: url('img/rainbow.jpg'); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  /*background-size: cover;
-    background: bisque;
+    background:url('../img/rainbow.jpg');
     background-repeat: no-repeat;
-    height: 20em;*/
+    background-size: cover;
+    backgroundpadding:5px;
+    border:1px solid black;
 }
 #nav_hfw {
-	width: 100%;
-	float: left;
-	margin: 0 0 0 0;
-	padding: 0;
-	background-color: #f2f2f2;
-	border-bottom: 1px solid #ccc;
+    width: 100%;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
 }
 #nav_hfw ul {
-	list-style: none;
-	width: 800px;
-	margin: 0 auto;
-	padding: 0;
+    list-style: none;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
 }
 #nav_hfw li {
-	float: left;
+    float: left;
 }
 #nav_hfw li a {
-	display: block;
-	padding: 8px 15px;
-	text-decoration: none;
-	font-weight: bold;
-	color: #069;
-	border-right: 1px solid #ccc;
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #069;
+    border-right: 1px solid #ccc;
 }
 #nav_hfw li:first-child a {
-	border-left: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 #nav_hfw li a:hover {
-	color: #c00;
-	background-color: #fff;
+    color: #c00;
+    background-color: #fff;
+}
+.indentmenu{
+font: bold 13px Arial;
+width: 100%; /*leave this value as is in most cases*/
+overflow: hidden;
 }
 
+.indentmenu ul{
+margin: 0;
+padding: 0;
+float: left;
+width: 80%; /*width of menu*/
+border: 1px solid #564c66; /*dark purple border*/
+border-width: 1px 0;
+background: black url(../img/indentbg.gif) center center repeat-x;
+}
+
+.indentmenu ul li{
+display: inline;
+}
+
+.indentmenu ul li a{
+float: left;
+color: white; /*text color*/
+padding: 5px 11px;
+text-decoration: none;
+border-right: 1px solid #564c66; /*dark purple divider between menu items*/
+}
+
+.indentmenu ul li a:visited{
+color: white;
+}
+
+.indentmenu ul li a:hover, .indentmenu ul li .current{
+color: white !important; /*text color of selected and active item*/
+padding-top: 6px; /*shift text down 1px for selected and active item*/
+padding-bottom: 4px; /*shift text down 1px for selected and active item*/
+background: black url(../img/indentbg2.gif) center center repeat-x;
+}
 #main_hfw {
     min-width: 1040px;
     min-height: 400px;
@@ -85,7 +116,7 @@ body {
     height: 80vh;
     padding: 10px;
     min-width: max-content;
-    width:24.5%;
+    width:25%;
     background:#bfb;
 }
 #content_2_hfw {    
