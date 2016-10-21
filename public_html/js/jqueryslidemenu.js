@@ -20,7 +20,7 @@ buildmenu:function(menuid, arrowsvar){
 		$headers.each(function(i){
 			var $curobj=$(this);
 			var $subul=$(this).find('ul:eq(0)');
-			this._dimensions={w:this.offsetWidth, h:32, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()};
+			this._dimensions={w:this.offsetWidth, h:35, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()};
 			this.istopheader=$curobj.parents("ul").length===1? true : false;
 			$subul.css({top:this.istopheader? this._dimensions.h+"px" : 0});
 			$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: arrowsvar.down[2]} : {}).append(
