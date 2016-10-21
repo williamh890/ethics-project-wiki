@@ -1,18 +1,19 @@
-var baseURL;
+var baseURL, mainURL;
 var premium = false;
 var keystrokes = "";
 
 if (document.location.href.indexOf('redmine') > -1) {
 	baseURL = "https://projects.cs.uaf.edu/redmine/projects/cs371_group_projects/repository/revisions/master/raw/public_html/";
+        mainUrl = 'https://projects.cs.uaf.edu/redmine/projects/cs371_group_projects/wiki/';
 }
 else {
-	baseURL = "file:///Users/johnpquan/UAF/Teaching/CS371_Computer_Ethics_and_Technical_Communication/HTML5Application/public_html";
+	baseURL = "file:///Users/johnpquan/UAF/Teaching/CS371_Computer_Ethics_and_Technical_Communication/HTML5Application/public_html/";
+        mainURL = '';
 }
 
 function getPage(id) {
-	var mainUrl = '';
-            mainUrl = mainUrl + id + '.html';
-	$('#' + id).load(mainUrl);
+            mainURL = baseURL + id + '.html';
+	$('#' + id).load(mainURL);
 }
 
 function setHead(head) {
