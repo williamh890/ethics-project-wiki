@@ -3,16 +3,15 @@ var premium = false;
 var keystrokes = "";
 
 if (document.location.href.indexOf('redmine') > -1) {
-	baseURL = "https://dev.projects.cs.uaf.edu/redmine/projects/cs371_html_from_wiki/repository/revisions/master/raw/public_html/";
+	baseURL = "https://projects.cs.uaf.edu/redmine/projects/cs371_group_projects/repository/revisions/master/raw/public_html/";
 }
 else {
-	baseURL = "file://Users/johnpquan/UAF/Teaching/CS371_Computer_Ethics_and_Technical_Communication/HTML5Application/public_html";
+	baseURL = "file:///Users/johnpquan/UAF/Teaching/CS371_Computer_Ethics_and_Technical_Communication/HTML5Application/public_html";
 }
 
 function getPage(id) {
 	var mainUrl = '';
             mainUrl = mainUrl + id + '.html';
-	}
 	$('#' + id).load(mainUrl);
 }
 
