@@ -12,7 +12,7 @@ else {
 }
 
 function getPage(id) {
-            mainURL = baseURL + id + '.html';
+            mainURL = mainURL + id + '.html';
 	$('#' + id).load(mainURL);
 }
 
