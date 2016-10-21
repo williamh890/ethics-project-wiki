@@ -5,71 +5,79 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-    <head>
-        <!-- This does't show up on the wiki -->
-        <title>How to create a 3-column layout with CSS</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<head>
+    <!-- This does't show up on the wiki -->
+    <title>How to create a 3-column layout with CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- for nav bar -->
-        <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        <!--[if lte IE 7]>
-        <style type="text/css">
-        html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
-        </style>
-        <![endif]-->
+    <!-- for nav bar -->
+    <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
-        <!-- end nav bar -->
-        
-        <link rel="stylesheet" href="css/test.css" type="text/css"/>
-        <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
+    <!--[if lte IE 7]>
+    <style type="text/css">
+    html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+    </style>
+    <![endif]-->
 
-    </head>
-    
-    <div class="wrapper_hfw">
-
-    <!-- start nav bar -->
-        <script type="text/javascript">
-        $(document).ready(function() {
-        $('#menu').load('navbar.html');
-        });
-        </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
     <!-- end nav bar -->
 
-                <div class="border box">
+    <link rel="stylesheet" href="css/test.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
 
-                        <!-- START OF NAVIGATION -->
+</head>
 
-                        <div id="menu"></div>
+<div class="wrapper_hfw">
+    <div id="body_hfw">
 
-                        <!-- END OF NAVIGATION -->
+        <!-- start nav bar -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#menu').load('navbar.html');
+            });
+        </script>
+        <!-- end nav bar -->
 
-                        <!-- START OF TAB CONTENT -->
+        <div class="border box">
 
-                        <div class="tab-content">
+            <!-- START OF NAVIGATION -->
 
-                                <!-- START OF HOME -->
+            <div id="menu"></div>
 
-                                <div id="home" class="tab-pane fade in active clearfix"></div>
+            <!-- END OF NAVIGATION -->
 
-                                <!-- END OF HOME -->
+            <!-- START OF TAB CONTENT -->
 
-                                <!-- START OF FREE -->
+            <div class="tab-content">
 
-                                <div id="page2" class="tab-pane fade in active clearfix"></div>
+                <!-- START OF HOME -->
 
-                                <!-- END OF FREE -->
-
-                        </div>
-
-                        <!-- END OF TAB CONTENT -->
-
+                <div id="home" style="display: block;" class="tab-pane fade in active clearfix">
+                    <!--Default page--> 
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#home').load('home.html');
+                        });
+                    </script>
+                    <!--end default page--> 
                 </div>
+                <!-- END OF HOME -->
+
+                <!-- START OF FREE -->
+
+                <div id="page2" class="tab-pane fade in active clearfix"></div>
+
+                <!-- END OF FREE -->
+
+            </div>
+
+            <!-- END OF TAB CONTENT -->
+
+        </div>
 
     </div>
