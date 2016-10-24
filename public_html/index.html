@@ -14,78 +14,54 @@ and open the template in the editor.
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- for nav bar -->
-    <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
-
-    <!--[if lte IE 7]>
-    <style type="text/css">
-    html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
-    </style>
-    <![endif]-->
-
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
-    <!-- end nav bar -->
 
     <link rel="stylesheet" href="css/test.css" type="text/css"/>
     <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
+    <script type="text/javascript" src="util.js"></script>
 
 </head>
+<body>
+    <div class="wrapper_hfw">
 
-<div class="wrapper_hfw">
-    <div id="body_hfw">
-
-        <!-- start MENU -->
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#menu').load('menu.html');
-            });
-        </script>
-        <!-- end MENU -->
+        <!--    <div id="body_hfw">-->
 
         <div class="border box">
 
-            <!-- START OF NAVIGATION -->
+            <!-- START OF HEADER -->
 
-            <div id="menu"></div>
+            <div id="menu"><script>displayDiv('menu');</script></div>
 
-            <!-- END OF NAVIGATION -->
+            <!-- END OF HEADER -->
 
-            <!-- START OF TAB CONTENT -->
+            <!-- START OF BODY -->
 
-            <div class="tab-content">
+            <div id="body_hfw">
 
                 <!-- START OF HOME -->
 
-                <div id="home" style="display: block;" class="tab-pane fade in active clearfix">
-                    <!--Default page - overwrite display in util.js --> 
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            $('#home').load('home.html');
-                        });
-                    </script>
-                    <!--end default page--> 
-                </div>
+                <div id="home"><script>displayDiv('home');</script></div>
+
                 <!-- END OF HOME -->
 
                 <!-- START OF PAGE2 -->
 
-                <div id="page2" class="tab-pane fade in active clearfix"></div>
+                <div id="page2"></div>
 
                 <!-- END OF PAGE2 -->
 
             </div>
 
-            <!-- END OF TAB CONTENT -->
+            <!-- END OF BODY -->
 
-            <div id="footer_hfw">
+            <!-- START OF FOOTER -->
 
-                <p>This is <code>&lt;div id="footer_hfw"&gt;</code>.</p>
-                <h2>In the Wiki Editor</h2>
-                <pre>{{html<br /><br />&lt;base href=&quot;https://projects.cs.uaf.edu/redmine/projects/cs371_group_projects/repository/revisions/master/raw/public_html/&quot;&gt;<br /><br />&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt; <br /><br />&lt;script&gt;<br />$(function(){<br />    $(&quot;#includedContent&quot;).load(&quot;index.html&quot;); <br />});<br />&lt;/script&gt;<br /><br />&lt;br&gt;<br />&lt;div id=&quot;includedContent&quot;&gt;&lt;/div&gt;<br /><br />}}</pre>
+            <div id="footer_hfw"><script>displayDiv('footer_hfw');</script></div>
 
-            </div>
+            <!-- END OF FOOTER -->
+
 
         </div>
 
     </div>
+</body>

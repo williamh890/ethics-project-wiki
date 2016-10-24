@@ -11,7 +11,7 @@
 //        mainURL = '';
 //}
 
-function getPage(id) {
+function displaySingleDiv(id) {
     //Stop displaying all other sibling divs on index.html
     $('#' + id).siblings().css("display", "none");
     //When menu.html "onclick", get the div from it's page,
@@ -20,7 +20,11 @@ function getPage(id) {
         $('#' + id).html(data).css("display", "block");
     });
 }
-
+function displayDiv(id) {
+    $.get(id + '.html', function (data) {
+        $('#' + id).html(data).css("display", "block");
+    });
+}
 //function setHead(head) {
 //	document.head.innerHTML = head;
 //}

@@ -12,19 +12,13 @@ and open the template in the editor.
         <!-- for nav bar -->
         <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
 
-        <!--[if lte IE 7]>
-        <style type="text/css">
-        html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
-        </style>
-        <![endif]-->
-
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
         <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
         <script type="text/javascript" src="util.js"></script>
         <!-- end nav bar -->
 
         <link rel="stylesheet" href="css/test.css" type="text/css"/>
-        <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
+
     </head>
     <div id="header_hfw" >
 
@@ -36,8 +30,8 @@ and open the template in the editor.
 
     <div id="myslidemenu" class="jqueryslidemenu">
         <ul>
-            <li><a data-toggle="tab" onclick="getPage('home');">Home</a></li>
-            <li><a data-toggle="tab" onclick="getPage('page2');">Page2</a></li>
+            <li><a onclick="displaySingleDiv('home');">Home</a></li>
+            <li><a onclick="displaySingleDiv('page2');">Page2</a></li>
             <li><a href="#">Folder 1</a>
             <ul>
                 <li><a href="#">Sub Item 1.1</a></li>
