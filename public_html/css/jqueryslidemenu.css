@@ -36,7 +36,7 @@ background: #414141; /*background of tabs (default state)*/
 color: white;
 padding: 8px 10px;
 border-right: 1px solid #778;
-color: #2d2b2b;
+color: white;
 text-decoration: none;
 }
 
@@ -50,7 +50,7 @@ color: white;
 
 .jqueryslidemenu ul li a:hover{
 background: black; /*tab link background during hover state*/
-color: white;
+color:#aae0f8;
 }
 	
 /*1st sub level menu*/
