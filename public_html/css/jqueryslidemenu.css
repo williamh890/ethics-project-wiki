@@ -14,6 +14,7 @@ horizontally if too close to the window's right edge.
 font: bold 12px Verdana;
 background: #414141;
 width: 100%;
+z-index: 10;
 }
 
 .jqueryslidemenu ul{
