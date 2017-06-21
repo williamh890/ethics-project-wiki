@@ -11,7 +11,7 @@ var arrowimages={down:['downarrowclass', 'img/down.gif', 23], right:['rightarrow
 
 var jqueryslidemenu={
 
-animateduration: {over: 1000, out: 1000}, //duration of slide in/ out animation, in milliseconds
+animateduration: {over: 200, out: 300}, //duration of slide in/ out animation, in milliseconds
 
 buildmenu:function(menuid, arrowsvar){
 	jQuery(document).ready(function($){
@@ -20,7 +20,7 @@ buildmenu:function(menuid, arrowsvar){
 		$headers.each(function(i){
 			var $curobj=$(this);
 			var $subul=$(this).find('ul:eq(0)');
-			this._dimensions={w:this.offsetWidth, h:35, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()};
+			this._dimensions={w:this.offsetWidth, h:this.offsetHeight, subulw:$subul.outerWidth(), subulh:$subul.outerHeight()};
 			this.istopheader=$curobj.parents("ul").length===1? true : false;
 			$subul.css({top:this.istopheader? this._dimensions.h+"px" : 0});
 			$curobj.children("a:eq(0)").css(this.istopheader? {paddingRight: arrowsvar.down[2]} : {}).append(
