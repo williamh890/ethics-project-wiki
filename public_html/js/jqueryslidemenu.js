@@ -11,7 +11,7 @@ var arrowimages={down:['downarrowclass', 'img/down.gif', 23], right:['rightarrow
 
 var jqueryslidemenu={
 
-animateduration: {over: 200, out: 100}, //duration of slide in/ out animation, in milliseconds
+animateduration: {over: 200, out: 1000}, //duration of slide in/ out animation, in milliseconds
 
 buildmenu:function(menuid, arrowsvar){
 	jQuery(document).ready(function($){
