@@ -21,7 +21,9 @@ body {
 .colorwhite {
     color: whitesmoke;
 }
-
+h1, h2, p {
+    margin-left: 10px;
+}
 .group-projects-wrapper {
     display: table;
     width: 100%;
@@ -68,13 +70,6 @@ body {
     padding:10px;
     background:#fbb450;
     text-align: left;
-}
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }
 @media print {
     body:before {
