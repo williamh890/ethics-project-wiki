@@ -17,7 +17,6 @@ body {
     padding:0;
     color:#000;
     background:#fff;
-    text-align: left;
 }
 .colorwhite {
     color: whitesmoke;
@@ -75,6 +74,7 @@ body {
 #group-projects-footer {
     padding:10px;
     background:#fbb450;
+    text-align: left;
 }
 @media print {
     body:before {
