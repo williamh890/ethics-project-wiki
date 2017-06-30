@@ -64,6 +64,13 @@ body {
 #group-projects-col-3 {
     background:#aae0f8;
 }
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 #group-projects-footer {
     padding:10px;
     background:#fbb450;
