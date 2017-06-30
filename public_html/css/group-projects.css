@@ -22,27 +22,28 @@ body {
     color: whitesmoke;
 }
 
-.wrapper_hfw {
+.group-projects-wrapper {
     display: table;
     width: 100%;
 }
-.parent {
+.column-parent {
     display: table-row;
     list-style: none;
 }
-.child {
+.column-child {
     display: table-cell;
     height: 100%;
-    width: calc(100% / 3)
+    width: calc(100% / 3);
+    padding: 10px;
 }
-#body_hfw {
+#group-projects-body {
     height:100%;
     min-height: 80%;
     width:100%;
     margin:0 auto;
     background:#ddd;
 }
-#header_hfw {
+#group-projects-header {
     height: 35em;
     padding:2em;
     background-image:url('../img/rainbow.jpg');
@@ -50,36 +51,22 @@ body {
     background-size: cover;
     border:1px solid black;
 }
-#main_hfw {
+#group-projects-main {
     min-width: 1040px;
     min-height: 400px;
 }
-#content_1_hfw {
-    padding: 10px;
+#group-projects-col-1 {
     background:#bfb;
 }
-#content_2_hfw {    
-    float:right;
-}
-#content_2_1_hfw {
-    padding:10px;
+#group-projects-col-2 {
     background:#dff;
 }
-#content_2_2_hfw {
-    padding:10px;
+#group-projects-col-3 {
     background:#aae0f8;
 }
-#footer_hfw {
-    clear:both;
+#group-projects-footer {
     padding:10px;
     background:#fbb450;
-}
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }
 @media print {
     body:before {
