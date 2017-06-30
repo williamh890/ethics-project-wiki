@@ -1,5 +1,5 @@
 /**
- * For a header.html "onclick" event, get the html document matching this id
+ * For a menu.html "onclick" event, get the html document matching this id
  *  name, stop displaying its siblings, and only display this as a div.
  * This is mainly used on index.html to only display the current div while 
  * hiding sibling divs, but it can be used anywhere.
