@@ -10,8 +10,9 @@
 function displaySingleDiv(id) {
     $.get(id + '.html', function (data) {
         $('#' + id).html(data).css("display", "block");
+        $('#' + id).siblings().css("display", "none");
     });
-    $('#' + id).siblings().css("display", "none");
+    
 }
 /**
  * Get the html document matching this id name and display as a div.
