@@ -21,7 +21,7 @@ body {
 .colorwhite {
     color: whitesmoke;
 }
-h1, h2, p {
+h1 {
     margin-left: 10px;
 }
 .group-projects-wrapper {
