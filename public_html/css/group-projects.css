@@ -69,6 +69,13 @@ body {
     background:#fbb450;
     text-align: left;
 }
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 @media print {
     body:before {
         border: none !important;
