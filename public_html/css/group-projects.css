@@ -24,6 +24,9 @@ body {
 h1 {
     margin-left: 10px;
 }
+h2 {
+    margin-left: -3px;
+}
 .group-projects-wrapper {
     display: table;
     width: 100%;
