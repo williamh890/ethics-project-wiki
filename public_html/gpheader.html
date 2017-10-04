@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- for nav bar -->
+        <link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jqueryslidemenu.js"></script>
+        <!-- end nav bar -->
+
+        <script type="text/javascript" src="util.js"></script>
+        <link rel="stylesheet" href="css/group-projects.css" type="text/css"/>
+
+    </head>
+
+    <div id="group-projects-header" >
+
+        <p class="colorwhite">This is <code>&lt;div id="group-projects-header"&gt;</code>.</p>
+
+        <h1 class="colorwhite">In the header</h1>
+
+    </div>
+
+    <div id="myslidemenu" class="jqueryslidemenu">
+        <ul>
+            <li><a onclick="displaySingleDiv('home');">Home</a></li>
+            <li><a onclick="displaySingleDiv('page2');">Page 2</a></li>
+            <li><a href="#">Other Pages</a>
+                <ul>
+                    <li><a href="http://www.w3schools.com/Bootstrap/default.asp">w3schools: Bootstrap</a></li>
+                    <li><a onclick="displaySingleDiv('page3');">Page 3</a></li>
+                    <li><a href="#">Sub Item 1.3</a></li>
+                    <li><a href="#">Sub Item 1.4</a></li>
+                </ul>
+            </li>
+            <li><a href="https://projects.cs.uaf.edu//redmine/projects/cs371_group_projects/wiki/Macros">Examples and Macros</a></li>
+            <li><a href="#">Folder 2</a>
+                <ul>
+                    <li><a href="#">Sub Item 2.1</a></li>
+                    <li><a href="#">Folder 2.1</a>
+                        <ul>
+                            <li><a href="#">Sub Item 2.1.1</a></li>
+                            <li><a href="#">Sub Item 2.1.2</a></li>
+                            <li><a href="#">Folder 3.1.1</a>
+                                <ul>
+                                    <li><a href="#">Sub Item 3.1.1.1</a></li>
+                                    <li><a href="#">Sub Item 3.1.1.2</a></li>
+                                    <li><a href="#">Sub Item 3.1.1.3</a></li>
+                                    <li><a href="#">Sub Item 3.1.1.4</a></li>
+                                    <li><a href="#">Sub Item 3.1.1.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sub Item 2.1.4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://www.dynamicdrive.com/style/">I found this menu here</a>
+            </li>   
+        </ul>
+
+        <br style="clear: left" />
+
+    </div>
+</html>
