@@ -5,7 +5,15 @@ h1 {
 .nav-item {
     cursor: pointer;
 }
-
+.img-box {
+  float: left;
+  clear:  both;
+  padding: 5px;
+  margin: 5px;
+  max-width: 100px
+  border: solid 2px black;
+  box-shadow: 2px 2px #888888;
+}
 .logo {
   font-family: "andale mono",	/* MS WebFont */ "monotype.com",	/* MS WebFont, former name */ monaco,	/* MacOS */ /* Fallback options */ "courier new",	/* Windows, MacOS */ courier,	/* Unix+X, MacOS */ monospace;
   font-weight: bold;
