@@ -5,15 +5,25 @@ h1 {
 .nav-item {
     cursor: pointer;
 }
-.img-box {
-  float: left;
-  clear:  both;
-  padding: 5px;
-  margin: 5px;
-  max-width: 100px
-  border: solid 2px black;
-  box-shadow: 2px 2px #888888;
+
+.image-box-right {
+  display: block;
+  float: right;
+  padding: 0px 0px 5px 10px;
+  margin: 0px 0px 5px 20px;
 }
+
+.image-box-left {
+  display: block;
+  float: left;
+  padding: 0px 10px 5px 0px;
+  margin: 0px 20px 5px 0px;
+}
+
+.step-block {
+   overflow: auto;
+}
+
 .logo {
   font-family: "andale mono",	/* MS WebFont */ "monotype.com",	/* MS WebFont, former name */ monaco,	/* MacOS */ /* Fallback options */ "courier new",	/* Windows, MacOS */ courier,	/* Unix+X, MacOS */ monospace;
   font-weight: bold;
