@@ -36,9 +36,6 @@ body {
   font-family: "andale mono",	/* MS WebFont */ "monotype.com",	/* MS WebFont, former name */ monaco,	/* MacOS */ /* Fallback options */ "courier new",	/* Windows, MacOS */ courier,	/* Unix+X, MacOS */ monospace;
   font-weight: bold;
   padding: 6px 10px 6px 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
   font-size: 25pt;
 }
 
