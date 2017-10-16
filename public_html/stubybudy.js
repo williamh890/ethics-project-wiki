@@ -1,24 +1,38 @@
+// stubybudy.js
+// William Horn
+// Created: Oct 3, 2017
+//
+// Code for handling div selection on wiki page.
+// each page(div) needs a button with the id 
+//      #<name>-btn
+// and a div with class
+//      .<name>-div
 
 
-$(window).on('load', function() {
-})
+// Adds event handlers to all pages
+SECTIONS = ["home", "brainstorming", "contextual-design"]
+
 
 $(document).ready(function() {
     $(".nav-div").hide();
-    set_initially_active("brainstorming") 
+    set_initially_active("brainstorming");
 
-
-    $("#home-btn").click(function() {
-        set_active(".home-div", this)
-    });
-
-
-    $("#brainstorming-btn").click(function() {
-        set_active(".brainstorming-div", this)
-    });
-
-
+    register_handlers(SECTIONS);
 });
+
+
+function register_handlers(sections) {
+    for(let i = 0; i < sections.length; ++i) {
+        let section = sections[i];
+
+        let btn_id = "#" + section + "-btn";
+        let div_cls = "." + section + "-div";
+
+        $(btn_id).click(function() {
+            set_active(div_cls, this)
+        });
+    }
+}
 
 function set_initially_active(tab) {
     let tab_btn = "#" + tab + "-btn"
