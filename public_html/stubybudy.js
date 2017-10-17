@@ -27,6 +27,7 @@ app.run(function($rootScope) {
 });
 
 
+// Custom directive for making a nav item
 app.directive("navItem", function() {
     return {
         restrict: 'E',
@@ -35,11 +36,11 @@ app.directive("navItem", function() {
         },
         priority: 1001,
         template:`
-        <li ng-class="{active : isCurrentPage(page)}" class="nav-item">
-            <a class="nav-link" ng-click="setPage(page)">
-              {{ page.title }}
-            </a>
-        </li>
+            <li ng-class="{active : isCurrentPage(page)}" class="nav-item">
+                <a class="nav-link" ng-click="setPage(page)">
+                  {{ page.title }}
+                </a>
+            </li>
         `
     }
 });
