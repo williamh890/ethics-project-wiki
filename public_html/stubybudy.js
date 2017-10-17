@@ -47,15 +47,21 @@ app.controller("pageCtrl", function($scope, $rootScope) {
 class Page {
     constructor(name) {
         this.name = name;
-
+        this.title = this._formatTitle(name)
+    }
+    
+    // formating: foo-bar -> Foo Bar
+    _formatTitle(name) {
+        let title = ""
         let titleWords = name.split("-");
-        this.title = "";
 
         for(let i = 0; i < titleWords.length; ++i) {
             let word = titleWords[i];
 
-            this.title += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+            title += word.charAt(0).toUpperCase() + word.slice(1) + " ";
         }
+
+        return title
     }
 }
 
@@ -72,3 +78,6 @@ function getPages(pageNames) {
 
     return pages;
 }
+
+
+
