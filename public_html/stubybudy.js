@@ -1,3 +1,4 @@
+'use strict';
 // stubybudy.js
 // William Horn
 // Created: Oct 3, 2017
@@ -9,61 +10,59 @@
 //      .<name>-div
 
 
-// Adds event handlers to all pages
-SECTIONS = ["home", "brainstorming", "contextual-design"]
+
+let app = angular.module("stubbyBuddyWiki", []);
 
 
-$(document).ready(function() {
-    $(".nav-div").hide();
-    set_initially_active("brainstorming");
+app.run(function($rootScope) {
+    $rootScope.pages = ["home", "brainstorming", "contextual-design"];
 
-    register_handlers(SECTIONS);
+    $rootScope.navLinks = getPages($rootScope.pages);
+    $rootScope.currentPage = $rootScope.navLinks[1];    
 });
 
 
-function register_handlers(sections) {
-    for(let i = 0; i < sections.length; ++i) {
-        let section = sections[i];
+app.controller("pageCtrl", function($scope, $rootScope) {
+    $scope.getPage = function() {
+        return "pages/" + $rootScope.currentPage.name + ".html";
+    }
 
-        let btn_id = "#" + section + "-btn";
-        let div_cls = "." + section + "-div";
+    $scope.setPage = function(page) {
+        $rootScope.currentPage = page;
+    }
 
-        $(btn_id).click(function() {
-            set_active(div_cls, this)
-        });
+    $scope.isCurrentPage = function(page) {
+        return $rootScope.currentPage === page;
+    }
+});
+
+
+class Page {
+    constructor(name) {
+        this.name = name;
+
+        let titleWords = name.split("-");
+        this.title = "";
+
+        for(let i = 0; i < titleWords.length; ++i) {
+            let word = titleWords[i];
+
+            this.title += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+        }
+
+        console.log(this.title)
     }
 }
 
-function set_initially_active(tab) {
-    let tab_btn = "#" + tab + "-btn"
-    $(tab_btn).addClass("active");
 
-    let tab_div = "." + tab + "-div"
-    $(tab_div).show();
-}
+function getPages(pageNames) {
+    let pages = [];
 
-function set_active(div_id, list_el) {
+    for(let i = 0; i < pageNames.length; ++i) {
+        let pageName = pageNames[i];
 
-    // Make the button clicked the active button
-    $(".active").removeClass("active")
-    $(list_el).addClass("active")
-
-
-    let new_active = $(div_id)
-
-    // Check to see if current 
-    if( new_active.hasClass("active-div")) {
-        return;
+        pages.push(new Page(pageName));
     }
 
-    // Hide old active div
-    let old_active = $(".active-div")
-    old_active.hide();
-    old_active.removeClass("active-div");
-    
-    // Show new one
-    new_active.show();
-    new_active.addClass("active-div");
+    return pages;
 }
-
-
