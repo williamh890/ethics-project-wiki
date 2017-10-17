@@ -27,6 +27,24 @@ app.run(function($rootScope) {
 });
 
 
+app.directive("navItem", function() {
+    return {
+        restrict: 'E',
+        scope: {
+            page: '@'
+        },
+        priority: 1001,
+        template:`
+        <li ng-class="{active : isCurrentPage(page)}" class="nav-item">
+            <a class="nav-link" ng-click="setPage(page)">
+              {{ page.title }}
+            </a>
+        </li>
+        `
+    }
+});
+
+
 // Functions for switch the current page
 app.controller("pageCtrl", function($scope, $rootScope) {
     $scope.getPage = function() {

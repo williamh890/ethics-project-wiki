@@ -35,16 +35,12 @@
       <a class="navbar-brand logo" >StubyBudy</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          
-          <!-- Make a link in the navbar for each page -->
-          <li ng-repeat="page in pages" ng-class="{active : isCurrentPage(page)}" class="nav-item">
-            <a class="nav-link" ng-click="setPage(page)">
-              {{ page.title }}
-            </a>
-          </li>
 
+        <ul class="navbar-nav mr-auto">
+          <!-- Make a link in the navbar for each page -->
+          <nav-item ng-repeat="page in pages" page="{{page}}"></nav-item>
         </ul>
+
       </div>
     </nav>
     
