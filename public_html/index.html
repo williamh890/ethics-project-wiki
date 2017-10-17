@@ -30,16 +30,18 @@
 
   </head>
 
+  <!-- Make the nav bar -->
   <div ng-app="stubbyBuddyWiki" ng-controller="pageCtrl">
     <nav class="navbar navbar-expand-md navbar-light bg-faded">
       <a class="navbar-brand logo" >StubyBudy</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-
-          <li ng-repeat="link in navLinks" ng-class="{active : isCurrentPage(link)}" class="nav-item">
-            <a class="nav-link" ng-click="setPage(link)">
-              {{ link.title }}
+          
+          <!-- Make a link in the navbar for each page -->
+          <li ng-repeat="page in pages" ng-class="{active : isCurrentPage(page)}" class="nav-item">
+            <a class="nav-link" ng-click="setPage(page)">
+              {{ page.title }}
             </a>
           </li>
 
@@ -49,7 +51,6 @@
     
     <!-- Show the current page -->
     <ng-include src="getPage()"></ng-include>
-
   </div>
 
 </html>

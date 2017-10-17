@@ -3,25 +3,31 @@
 // William Horn
 // Created: Oct 3, 2017
 //
-// Code for handling div selection on wiki page.
-// each page(div) needs a button with the id 
-//      #<name>-btn
-// and a div with class
-//      .<name>-div
-
+// Code for handling page selection on wiki page.
+// To make a new page, add an html file in the 
+// public_html/pages folder of the repository
+// then add it to the pages list
+//
+// Titles will be made from name like so:
+//
+//     contextual-design -> Contextual Design 
+//
+// the path in the repos is 'public_html/pages/contextual-design.html'
 
 
 let app = angular.module("stubbyBuddyWiki", []);
 
 
+// Run once when the page is loaded
 app.run(function($rootScope) {
-    $rootScope.pages = ["home", "brainstorming", "contextual-design"];
+    $rootScope.pageNames = ["home", "brainstorming", "contextual-design"];
 
-    $rootScope.navLinks = getPages($rootScope.pages);
-    $rootScope.currentPage = $rootScope.navLinks[1];    
+    $rootScope.pages = getPages($rootScope.pageNames);
+    $rootScope.currentPage = $rootScope.pages[1];    
 });
 
 
+// Functions for switch the current page
 app.controller("pageCtrl", function($scope, $rootScope) {
     $scope.getPage = function() {
         return "pages/" + $rootScope.currentPage.name + ".html";
@@ -37,6 +43,7 @@ app.controller("pageCtrl", function($scope, $rootScope) {
 });
 
 
+// Holds both the name and the title
 class Page {
     constructor(name) {
         this.name = name;
@@ -49,12 +56,11 @@ class Page {
 
             this.title += word.charAt(0).toUpperCase() + word.slice(1) + " ";
         }
-
-        console.log(this.title)
     }
 }
 
 
+// Turn a list of strings into a list of Page objects
 function getPages(pageNames) {
     let pages = [];
 
